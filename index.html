@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live HTML & CSS Previewer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white h-screen flex flex-col">
+
+  <header class="text-center text-2xl font-bold py-4 bg-gray-800 shadow-md">
+    Live HTML & CSS Previewer
+  </header>
+
+  <main class="flex flex-1 overflow-hidden">
+    <textarea
+      id="editor"
+      class="w-1/2 p-4 bg-gray-950 text-green-400 font-mono resize-none outline-none"
+      placeholder="Type your HTML and CSS here..."
+    ></textarea>
+
+    <iframe
+      id="preview"
+      class="w-1/2 bg-white"
+    ></iframe>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
