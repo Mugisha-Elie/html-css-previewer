@@ -15,3 +15,25 @@ editor.addEventListener('input', () => {
   localStorage.setItem("savedCode", code);
   preview.srcdoc = code;
 });
+
+
+//JS for downloading the html file
+
+const downloadBtn = document.getElementById("downloadBtn");
+
+downloadBtn.addEventListener("click", ()=>{
+    const code = editor.value;
+
+    //create a blob a file like object
+    const blob = new Blob([code], {type: "text/html"});
+
+    //create a download link
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "my-preview.html";
+    link.click();
+
+    //clean up
+    URL.revokeObjectURL(url);
+});
