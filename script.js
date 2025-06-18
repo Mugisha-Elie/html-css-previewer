@@ -1,3 +1,5 @@
+
+
 //Select the textarea and preview elements
 const editor = document.getElementById('editor');
 const preview = document.getElementById('preview');
@@ -31,9 +33,11 @@ downloadBtn.addEventListener("click", ()=>{
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "my-preview.html";
+    link.download = "my_preview.html";
     link.click();
 
     //clean up
     URL.revokeObjectURL(url);
 });
+
+
